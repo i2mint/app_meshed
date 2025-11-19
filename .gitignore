@@ -2,6 +2,13 @@ wads_configs.json
 data/wads_configs.json
 wads/data/wads_configs.json
 
+# app_meshed specific
+data/
+*.npy
+*.pkl
+*.wav
+*.mp3
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
