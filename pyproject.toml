@@ -12,7 +12,18 @@ readme = "README.md"
 requires-python = ">=3.10"
 keywords = []
 authors = []
-dependencies = []
+dependencies = [
+    "meshed>=0.1.0",
+    "dol>=0.2.0",
+    "i2>=0.1.0",
+    "creek>=0.1.0",
+    "ju>=0.1.0",
+    "qh>=0.0.4",
+    "fastapi>=0.100.0",
+    "uvicorn[standard]>=0.23.0",
+    "python-multipart>=0.0.6",
+    "pydantic>=2.0.0",
+]
 
 [project.license]
 text = "mit"
