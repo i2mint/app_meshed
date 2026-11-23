@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "app_meshed"
-version = "0.0.2"
+version = "0.0.3"
 description = "Http services and frontend for meshed operations"
 readme = "README.md"
 requires-python = ">=3.10"
