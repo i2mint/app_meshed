@@ -70,7 +70,8 @@ class FunctionRegistry:
         ...     return a + b
         >>> registry.register("add", add)
         >>> metadata = registry.get_metadata("add")
-        >>> print(metadata.parameters)
+        >>> [p.name for p in metadata.parameters]
+        ['a', 'b']
     """
 
     def __init__(self):
