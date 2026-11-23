@@ -1,34 +1,34 @@
 {
   "schema_version": 1,
-  "built_at": "2026-11-23T08:15:46Z",
+  "built_at": "2026-11-23T08:17:46Z",
   "package": {
     "name": "app_meshed",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "display_name": "app_meshed",
     "source": "pyproject.toml"
   },
   "git": {
     "available": true,
-    "commit": "c0976a2d2cdb40ec9eeb039f2d67fc701cff09cd",
-    "short_commit": "c0976a2",
+    "commit": "8ef282baac75f29f6694bd7cbb744a1b602201ae",
+    "short_commit": "8ef282b",
     "branch": "master",
     "tags": [
-      "0.0.2"
+      "0.0.3"
     ],
     "dirty": false,
     "remote_url": "https://github.com/i2mint/app_meshed",
-    "commit_url": "https://github.com/i2mint/app_meshed/commit/c0976a2d2cdb40ec9eeb039f2d67fc701cff09cd",
+    "commit_url": "https://github.com/i2mint/app_meshed/commit/8ef282baac75f29f6694bd7cbb744a1b602201ae",
     "error": null
   },
   "ci": {
     "provider": "github",
     "repository": "i2mint/app_meshed",
-    "sha": "bb334e50d42a840357d55fd89d5c7ddd9ee9bd6b",
+    "sha": "1bbf3ba98fe00a759d69432ab6edf5049e4049eb",
     "sha_in_history": true,
     "ref": "refs/heads/master",
     "ref_name": "master",
-    "run_id": "45136875429",
-    "run_url": "https://github.com/i2mint/app_meshed/actions/runs/45136875429",
+    "run_id": "45137193961",
+    "run_url": "https://github.com/i2mint/app_meshed/actions/runs/45137193961",
     "server_url": "https://github.com"
   },
   "tools": {
@@ -62,11 +62,11 @@
   },
   "pypi": {
     "checked": true,
-    "latest": null,
-    "relation": "unknown",
+    "latest": "0.0.3",
+    "relation": "same",
     "error": null
   },
-  "reproduce": "git clone https://github.com/i2mint/app_meshed && cd app_meshed\ngit checkout c0976a2d2cdb40ec9eeb039f2d67fc701cff09cd\npip install \"epythet==0.2.25\"\nepythet quickstart . --ignore tests/ scrap/ examples/",
+  "reproduce": "git clone https://github.com/i2mint/app_meshed && cd app_meshed\ngit checkout 8ef282baac75f29f6694bd7cbb744a1b602201ae\npip install \"epythet==0.2.25\"\nepythet quickstart . --ignore tests/ scrap/ examples/",
   "warnings": [],
   "alignment": {
     "aligned": true,

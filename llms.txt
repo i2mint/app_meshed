@@ -22,7 +22,7 @@
 - [app_meshed.stores.root_store](_autosummary/app_meshed.stores.root_store.html.md): Unified store interface using dol for source-keyed data access.
 - [app_meshed.utils](_autosummary/app_meshed.utils.html.md): | &#96;example_functions&#96;   | Example functions for DAG composition.   |
 - [app_meshed.utils.example_functions](_autosummary/app_meshed.utils.example_functions.html.md): Example functions for DAG composition.
-- [About this build](about-this-build.html.md): This documentation was built on &#42;&#42;2026-11-23 08:15 UTC&#42;&#42; from commit &lt;a href="https://github.com/i2m...
+- [About this build](about-this-build.html.md): This documentation was built on &#42;&#42;2026-11-23 08:17 UTC&#42;&#42; from commit &lt;a href="https://github.com/i2m...
 
 ## Optional
 
