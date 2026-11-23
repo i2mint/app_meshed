@@ -20,6 +20,7 @@ except ImportError:
 @dataclass
 class ParameterInfo:
     """Information about a function parameter."""
+
     name: str
     annotation: str
     default: Optional[Any] = None
@@ -40,6 +41,7 @@ class ParameterInfo:
 @dataclass
 class FunctionMetadata:
     """Metadata about a registered function."""
+
     name: str
     doc: Optional[str]
     parameters: List[ParameterInfo]
@@ -117,7 +119,6 @@ class FunctionRegistry:
         # Extract parameters
         parameters = []
         for param_name, param in sig.parameters.items():
-
             # Get annotation as string
             annotation = "Any"
             if param.annotation != inspect.Parameter.empty:

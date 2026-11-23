@@ -85,7 +85,9 @@ class DAGService:
         binds: Dict[str, Dict[str, str]] = {}
         for edge in edges:
             target_input = edge.get("targetInput", edge.get("sourceOutput", "value"))
-            binds.setdefault(edge["target"], {})[target_input] = out_names[edge["source"]]
+            binds.setdefault(edge["target"], {})[target_input] = out_names[
+                edge["source"]
+            ]
 
         func_nodes = []
         for node in nodes:
@@ -99,7 +101,10 @@ class DAGService:
                 )
             func_nodes.append(
                 FuncNode(
-                    func, name=node_id, out=out_names[node_id], bind=binds.get(node_id, {})
+                    func,
+                    name=node_id,
+                    out=out_names[node_id],
+                    bind=binds.get(node_id, {}),
                 )
             )
 

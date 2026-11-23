@@ -17,9 +17,7 @@ from functools import partial
 try:
     from dol import Pipe, Store, wrap_kvs, filt_iter, cached_keys, Files
 except ImportError:
-    raise ImportError(
-        "dol is required. Install with: pip install dol"
-    )
+    raise ImportError("dol is required. Install with: pip install dol")
 
 
 class RootStore:
@@ -77,8 +75,8 @@ class RootStore:
         # Wrap with pickle codec for Python object serialization
         return wrap_kvs(
             base_store,
-            key_of_id=lambda k: k if k.endswith('.pkl') else f"{k}.pkl",
-            id_of_key=lambda k: k.replace('.pkl', ''),
+            key_of_id=lambda k: k if k.endswith(".pkl") else f"{k}.pkl",
+            id_of_key=lambda k: k.replace(".pkl", ""),
             obj_of_data=pickle.loads,
             data_of_obj=pickle.dumps,
         )
@@ -96,9 +94,11 @@ class RootStore:
         # Wrap with JSON codec
         return wrap_kvs(
             base_store,
-            key_of_id=lambda k: k if k.endswith('.json') else f"{k}.json",
-            id_of_key=lambda k: k.replace('.json', ''),
-            obj_of_data=lambda data: json.loads(data.decode() if isinstance(data, bytes) else data),
+            key_of_id=lambda k: k if k.endswith(".json") else f"{k}.json",
+            id_of_key=lambda k: k.replace(".json", ""),
+            obj_of_data=lambda data: json.loads(
+                data.decode() if isinstance(data, bytes) else data
+            ),
             data_of_obj=lambda obj: json.dumps(obj, indent=2).encode(),
         )
 
@@ -112,9 +112,11 @@ class RootStore:
 
         return wrap_kvs(
             base_store,
-            key_of_id=lambda k: k if k.endswith('.json') else f"{k}.json",
-            id_of_key=lambda k: k.replace('.json', ''),
-            obj_of_data=lambda data: json.loads(data.decode() if isinstance(data, bytes) else data),
+            key_of_id=lambda k: k if k.endswith(".json") else f"{k}.json",
+            id_of_key=lambda k: k.replace(".json", ""),
+            obj_of_data=lambda data: json.loads(
+                data.decode() if isinstance(data, bytes) else data
+            ),
             data_of_obj=lambda obj: json.dumps(obj, indent=2).encode(),
         )
 

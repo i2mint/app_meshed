@@ -72,7 +72,7 @@ def power(base: float, exponent: float = 2.0) -> float:
     Returns:
         base ** exponent
     """
-    return base ** exponent
+    return base**exponent
 
 
 def absolute_value(x: float) -> float:

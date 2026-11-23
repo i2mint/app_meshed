@@ -219,11 +219,11 @@ from app_meshed.stores.root_store import create_default_root_store
 root = create_default_root_store()
 
 # Uniform interface across all data types
-root.meshes["my_dag"] = dag_config      # Store DAG
-root.configs["settings"] = app_config   # Store config
-dag = root.meshes["my_dag"]             # Retrieve DAG
-"my_dag" in root.meshes                 # Check existence
-del root.meshes["my_dag"]               # Delete DAG
+root.meshes["my_dag"] = dag_config  # Store DAG
+root.configs["settings"] = app_config  # Store config
+dag = root.meshes["my_dag"]  # Retrieve DAG
+"my_dag" in root.meshes  # Check existence
+del root.meshes["my_dag"]  # Delete DAG
 ```
 
 **Benefits:**
@@ -255,6 +255,7 @@ def process(audio: str, gain: float = 1.0) -> dict:
     """Process audio with gain."""
     return {"processed": True, "gain": gain}
 
+
 # Automatic generation of:
 # - API endpoint: /schema/function/process
 # - JSON Schema for form rendering
@@ -273,15 +274,11 @@ stream[bt:tt]  # Get data from bottom-time to top-time
 
 **Example:**
 ```python
-audio_stream[1.0:2.0]    # 1 second of audio starting at t=1.0s
-sensor_stream[0.5:1.5]   # 1 second of sensor data starting at t=0.5s
+audio_stream[1.0:2.0]  # 1 second of audio starting at t=1.0s
+sensor_stream[0.5:1.5]  # 1 second of sensor data starting at t=0.5s
 
 # Multi-channel synchronized
-multi_view.get_synchronized_slice(
-    ["accel_x", "accel_y", "accel_z"],
-    bt=2.0,
-    tt=4.0
-)
+multi_view.get_synchronized_slice(["accel_x", "accel_y", "accel_z"], bt=2.0, tt=4.0)
 ```
 
 ---
@@ -409,6 +406,7 @@ def my_function(param1: type1, param2: type2 = default) -> return_type:
     """Docstring for the function."""
     return result
 
+
 # Add to EXAMPLE_FUNCTIONS list
 EXAMPLE_FUNCTIONS.append(("my_function", my_function))
 ```
@@ -430,6 +428,7 @@ def _create_my_store(self) -> Mapping:
         # ... codecs ...
     )
 
+
 # Add to __init__
 self.my_store = self._create_my_store()
 ```
@@ -439,10 +438,12 @@ self.my_store = self._create_my_store()
 ```python
 from app_meshed.services.stream_service import StreamSource
 
+
 class MyStreamSource(StreamSource):
     def __getitem__(self, key):
         # Implement [bt:tt] slicing
         pass
+
 
 # Register
 stream_registry.register(MyStreamSource(...))

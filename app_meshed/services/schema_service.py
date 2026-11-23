@@ -98,7 +98,6 @@ class SchemaGenerator:
 
         # Process each parameter
         for param_name, param in sig.parameters.items():
-
             # Get type annotation
             param_type = "string"  # default
             if param.annotation != inspect.Parameter.empty:

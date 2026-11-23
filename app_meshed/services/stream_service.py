@@ -128,11 +128,13 @@ class FileStreamSource(StreamSource):
         metadata = super().get_metadata()
         data = self._load_data()
 
-        metadata.update({
-            "file_path": str(self.file_path),
-            "length_samples": len(data),
-            "length_seconds": len(data) / self.sample_rate,
-        })
+        metadata.update(
+            {
+                "file_path": str(self.file_path),
+                "length_samples": len(data),
+                "length_seconds": len(data) / self.sample_rate,
+            }
+        )
 
         return metadata
 
@@ -187,9 +189,7 @@ class StreamRegistry:
             for stream_id, stream in self._streams.items()
         }
 
-    def slice_stream(
-        self, source_id: str, bt: float, tt: float
-    ) -> Dict[str, Any]:
+    def slice_stream(self, source_id: str, bt: float, tt: float) -> Dict[str, Any]:
         """Slice a stream by time range.
 
         Args:

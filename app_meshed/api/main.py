@@ -15,7 +15,11 @@ import os
 
 from app_meshed.stores.root_store import create_default_root_store
 from app_meshed.services.function_registry import get_global_registry
-from app_meshed.services.schema_service import func_to_schema, object_to_schema, get_dag_config_schema
+from app_meshed.services.schema_service import (
+    func_to_schema,
+    object_to_schema,
+    get_dag_config_schema,
+)
 from app_meshed.services.dag_service import DAGService
 from app_meshed.services.stream_service import get_stream_registry, MultiChannelView
 
@@ -55,6 +59,7 @@ multi_channel_view = MultiChannelView(stream_registry)
 async def startup_event():
     """Run initialization tasks on server startup."""
     from app_meshed.api.startup import run_startup_initialization
+
     run_startup_initialization(data_path=DATA_PATH)
 
 
@@ -212,7 +217,12 @@ async def delete_store_item(store_name: str, key: str):
             )
 
         del store[key]
-        return {"status": "success", "store": store_name, "key": key, "action": "deleted"}
+        return {
+            "status": "success",
+            "store": store_name,
+            "key": key,
+            "action": "deleted",
+        }
 
     except ValueError as e:
         raise HTTPException(status_code=404, detail=str(e))
@@ -240,7 +250,9 @@ async def list_functions():
             "metadata": function_registry.get_all_metadata(),
         }
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Error listing functions: {str(e)}")
+        raise HTTPException(
+            status_code=500, detail=f"Error listing functions: {str(e)}"
+        )
 
 
 @app.get("/functions/{function_name}/metadata")
