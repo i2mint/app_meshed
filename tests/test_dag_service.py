@@ -69,14 +69,13 @@ def test_chained_dag_execution(dag_service):
         "params": {},
     }
 
-    # (5 + 3) * 2 = 16
-    inputs = {"a": 5, "b": 3, "step2": {"b": 2}}
+    # step1 = add(a, b); step2 = multiply(a=step1, b), and b is shared: (5 + 3) * 3 = 24
+    inputs = {"a": 5, "b": 3}
 
     result = dag_service.execute_from_config(config, inputs)
 
     assert result["status"] == "success"
-    # The actual result will depend on meshed's execution model
-    # This test validates the structure works
+    assert result["result"] == 24
 
 
 def test_dag_validation_valid(dag_service):

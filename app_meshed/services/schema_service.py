@@ -97,8 +97,7 @@ class SchemaGenerator:
             schema["description"] = func.__doc__.strip()
 
         # Process each parameter
-        for param_name in sig.names:
-            param = sig.params[param_name]
+        for param_name, param in sig.parameters.items():
 
             # Get type annotation
             param_type = "string"  # default
