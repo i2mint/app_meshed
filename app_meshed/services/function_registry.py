@@ -115,8 +115,7 @@ class FunctionRegistry:
 
         # Extract parameters
         parameters = []
-        for param_name in sig.names:
-            param = sig.params[param_name]
+        for param_name, param in sig.parameters.items():
 
             # Get annotation as string
             annotation = "Any"
