@@ -15,8 +15,7 @@ import pickle
 from functools import partial
 
 try:
-    from dol import Pipe, Store, wrap_kvs, filt_iter, cached_keys
-    from dol.sources import Files
+    from dol import Pipe, Store, wrap_kvs, filt_iter, cached_keys, Files
 except ImportError:
     raise ImportError(
         "dol is required. Install with: pip install dol"
@@ -30,10 +29,10 @@ class RootStore:
     through dedicated sub-stores, all unified under a single interface.
 
     Example:
-        >>> root = RootStore(base_path="/data")
-        >>> root.raw_data["audio_001.wav"]  # Access raw data
-        >>> root.functions["process_audio"]  # Access functions
-        >>> root.meshes["my_dag"]  # Access saved DAGs
+        >>> import tempfile
+        >>> root = RootStore(base_path=tempfile.mkdtemp())
+        >>> [hasattr(root, name) for name in ("raw_data", "functions", "meshes")]
+        [True, True, True]
     """
 
     def __init__(self, base_path: str = "./data"):

@@ -8,9 +8,10 @@ This module provides:
 
 from typing import Any, Dict, List, Optional, Callable
 import json
+from functools import partial
 
 try:
-    from meshed import DAG
+    from meshed import DAG, FuncNode, parameter_merger
     from meshed.makers import code_to_dag
 except ImportError:
     raise ImportError("meshed is required. Install with: pip install meshed")
@@ -78,37 +79,38 @@ class DAGService:
         if not nodes:
             raise ValueError("DAG must have at least one node")
 
-        # Build function map
-        funcs = {}
+        # Build the function nodes. A node's output variable is its ``output_name``
+        # (default: its id); an edge binds the target's parameter to the source's output.
+        out_names = {n["id"]: n.get("output_name", n["id"]) for n in nodes}
+        binds: Dict[str, Dict[str, str]] = {}
+        for edge in edges:
+            target_input = edge.get("targetInput", edge.get("sourceOutput", "value"))
+            binds.setdefault(edge["target"], {})[target_input] = out_names[edge["source"]]
+
+        func_nodes = []
         for node in nodes:
             node_id = node["id"]
             func_name = node["function"]
-
             try:
                 func = self.function_registry.get_function(func_name)
-                funcs[node_id] = func
             except KeyError:
                 raise ValueError(
                     f"Function '{func_name}' not found in registry for node '{node_id}'"
                 )
-
-        # Build bindings from edges
-        # Format: {target_node: {target_param: source_node}}
-        binds = {}
-        for edge in edges:
-            source = edge["source"]
-            target = edge["target"]
-            target_input = edge.get("targetInput", edge.get("sourceOutput", "value"))
-
-            if target not in binds:
-                binds[target] = {}
-
-            binds[target][target_input] = source
+            func_nodes.append(
+                FuncNode(
+                    func, name=node_id, out=out_names[node_id], bind=binds.get(node_id, {})
+                )
+            )
 
         # Create the DAG
         try:
-            dag = DAG(funcs, **binds)
-            return dag
+            # Registered functions are user code: a shared parameter may be annotated
+            # differently by two of them (int vs float), which must not be an error.
+            return DAG(
+                func_nodes,
+                parameter_merge=partial(parameter_merger, same_annotation=False),
+            )
         except Exception as e:
             raise ValueError(f"Error creating DAG: {str(e)}")
 
