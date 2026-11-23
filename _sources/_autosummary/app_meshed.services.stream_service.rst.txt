@@ -1,0 +1,21 @@
+app\_meshed.services.stream\_service
+====================================
+
+.. automodule:: app_meshed.services.stream_service
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      get_stream_registry
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      FileStreamSource
+      MultiChannelView
+      StreamRegistry
+      StreamSource
+   

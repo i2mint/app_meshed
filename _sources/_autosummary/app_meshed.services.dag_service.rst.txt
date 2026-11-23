@@ -1,0 +1,19 @@
+app\_meshed.services.dag\_service
+=================================
+
+.. automodule:: app_meshed.services.dag_service
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      create_chained_dag_example
+      create_simple_dag_example
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      DAGService
+   

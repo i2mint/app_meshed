@@ -1,0 +1,13 @@
+app\_meshed.cli
+===============
+
+.. automodule:: app_meshed.cli
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      main
+      setup_logging
+   

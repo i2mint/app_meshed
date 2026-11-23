@@ -1,0 +1,23 @@
+app\_meshed.utils.example\_functions
+====================================
+
+.. automodule:: app_meshed.utils.example_functions
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      absolute_value
+      add
+      concatenate
+      divide
+      list_average
+      list_sum
+      multiply
+      power
+      string_length
+      subtract
+      to_lowercase
+      to_uppercase
+   

@@ -1,0 +1,33 @@
+# app_meshed
+
+> Http services and frontend for meshed operations
+
+
+## Pages
+
+- [app_meshed](index.html.md): &#42;&#42;HTTP services and frontend for meshed operations&#42;&#42;
+- [API reference](api.html.md): | &#96;app_meshed&#96;   | app_meshed: HTTP services and frontend for meshed operations.   |
+- [app_meshed](_autosummary/app_meshed.html.md): app_meshed: HTTP services and frontend for meshed operations.
+- [app_meshed.api](_autosummary/app_meshed.api.html.md): | &#96;main&#96;       | Main FastAPI application for app_meshed.   |
+- [app_meshed.api.main](_autosummary/app_meshed.api.main.html.md): Main FastAPI application for app_meshed.
+- [app_meshed.api.startup](_autosummary/app_meshed.api.startup.html.md): Startup initialization for app_meshed.
+- [app_meshed.cli](_autosummary/app_meshed.cli.html.md): CLI for running the app_meshed server.
+- [app_meshed.models](_autosummary/app_meshed.models.html.md): Page content
+- [app_meshed.services](_autosummary/app_meshed.services.html.md): | &#96;dag_service&#96;             | DAG service for meshed operations.                          |
+- [app_meshed.services.dag_service](_autosummary/app_meshed.services.dag_service.html.md): DAG service for meshed operations.
+- [app_meshed.services.function_registry](_autosummary/app_meshed.services.function_registry.html.md): Function registry with i2 signature introspection.
+- [app_meshed.services.schema_service](_autosummary/app_meshed.services.schema_service.html.md): Schema generation service using ju (JSON Schema utilities).
+- [app_meshed.services.stream_service](_autosummary/app_meshed.services.stream_service.html.md): Stream service using creek for time-series data slicing.
+- [app_meshed.stores](_autosummary/app_meshed.stores.html.md): | &#96;root_store&#96;   | Unified store interface using dol for source-keyed data access.   |
+- [app_meshed.stores.root_store](_autosummary/app_meshed.stores.root_store.html.md): Unified store interface using dol for source-keyed data access.
+- [app_meshed.utils](_autosummary/app_meshed.utils.html.md): | &#96;example_functions&#96;   | Example functions for DAG composition.   |
+- [app_meshed.utils.example_functions](_autosummary/app_meshed.utils.example_functions.html.md): Example functions for DAG composition.
+- [About this build](about-this-build.html.md): This documentation was built on &#42;&#42;2026-11-23 08:15 UTC&#42;&#42; from commit &lt;a href="https://github.com/i2m...
+
+## Optional
+
+- [app_meshed.md](app_meshed.md): Complete documentation in a single file.
+
+## Build
+
+- [build_info.json](build_info.json): build provenance (commit, version, tool versions, whether the docs match the package)

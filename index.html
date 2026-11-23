@@ -1,0 +1,661 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="./">
+  <head><meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link rel="alternate" type="text/markdown" href="index.html.md">
+<link rel="describedby" href="llms.txt" type="text/markdown">
+<link rel="alternate" type="text/markdown" href="index.html.md">
+<link rel="describedby" href="llms.txt"><link rel="index" title="Index" href="genindex.html"><link rel="search" title="Search" href="search.html"><link rel="next" title="API reference" href="api.html">
+
+    <!-- Generated with Sphinx 9.1.1 and Furo 2025.12.19 -->
+        <title>app_meshed</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=7bdb33bb" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx_autodoc_typehints.css?v=057ac668" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=8dab3a3b" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f0f0f0;
+  --color-code-foreground: black;
+  --color-brand-primary: #92361f;
+  --color-brand-content: #92361f;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-brand-primary: #ff987e;
+  --color-brand-content: #ff987e;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-brand-primary: #ff987e;
+  --color-brand-content: #ff987e;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle site navigation sidebar">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc" aria-label="Toggle table of contents sidebar">
+<label class="overlay sidebar-overlay" for="__navigation"></label>
+<label class="overlay toc-overlay" for="__toc"></label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <span class="icon"><svg><use href="#svg-menu"></use></svg></span>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="#"><div class="brand">app_meshed</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="#">
+  
+  <span class="sidebar-brand-text">app_meshed</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="api.html">API reference</a><input aria-label="Toggle navigation of API reference" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="_autosummary/app_meshed.html">app_meshed</a><input aria-label="Toggle navigation of app_meshed" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="_autosummary/app_meshed.api.html">app_meshed.api</a><input aria-label="Toggle navigation of app_meshed.api" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/app_meshed.api.main.html">app_meshed.api.main</a></li>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/app_meshed.api.startup.html">app_meshed.api.startup</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/app_meshed.cli.html">app_meshed.cli</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/app_meshed.models.html">app_meshed.models</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="_autosummary/app_meshed.services.html">app_meshed.services</a><input aria-label="Toggle navigation of app_meshed.services" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/app_meshed.services.dag_service.html">app_meshed.services.dag_service</a></li>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/app_meshed.services.function_registry.html">app_meshed.services.function_registry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/app_meshed.services.schema_service.html">app_meshed.services.schema_service</a></li>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/app_meshed.services.stream_service.html">app_meshed.services.stream_service</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="_autosummary/app_meshed.stores.html">app_meshed.stores</a><input aria-label="Toggle navigation of app_meshed.stores" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/app_meshed.stores.root_store.html">app_meshed.stores.root_store</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="_autosummary/app_meshed.utils.html">app_meshed.utils</a><input aria-label="Toggle navigation of app_meshed.utils" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/app_meshed.utils.example_functions.html">app_meshed.utils.example_functions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="view-this-page">
+  <a class="muted-link" href="_sources/index.md.txt" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div>
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <!-- generated by epythet -->
+<section id="app-meshed">
+<span id="app_meshed"></span><h1>app_meshed<a class="headerlink" href="#app-meshed" title="Link to this heading">¶</a></h1>
+<p><strong>HTTP services and frontend for meshed operations</strong></p>
+<p>A modular, source-keyed architecture for DAG construction, data storage, and stream visualization built on the i2mint ecosystem (<code class="docutils literal notranslate"><span class="pre">meshed</span></code>, <code class="docutils literal notranslate"><span class="pre">dol</span></code>, <code class="docutils literal notranslate"><span class="pre">i2</span></code>, <code class="docutils literal notranslate"><span class="pre">creek</span></code>, <code class="docutils literal notranslate"><span class="pre">ju</span></code>, <code class="docutils literal notranslate"><span class="pre">qh</span></code>).</p>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">app_meshed</span></code> provides a web-based platform to:</p>
+<ul class="simple">
+<li><p>Compose and execute <code class="docutils literal notranslate"><span class="pre">meshed</span></code> DAGs through a visual interface</p></li>
+<li><p>Access data through flat, key-value interfaces (source-keyed architecture)</p></li>
+<li><p>Visualize multi-dimensional time-series streams</p></li>
+<li><p>Generate forms automatically from function signatures</p></li>
+</ul>
+</section>
+<section id="architecture">
+<h2>Architecture<a class="headerlink" href="#architecture" title="Link to this heading">¶</a></h2>
+<section id="core-philosophy">
+<h3>Core Philosophy<a class="headerlink" href="#core-philosophy" title="Link to this heading">¶</a></h3>
+<p><strong>Source-Keyed Data:</strong> All data is accessed via flat, key-value interfaces (Mappings) provided by <code class="docutils literal notranslate"><span class="pre">dol</span></code>.</p>
+<p><strong>Interface-First:</strong> Python functions are the source of truth. Their signatures (<code class="docutils literal notranslate"><span class="pre">i2</span></code>) drive frontend forms (<code class="docutils literal notranslate"><span class="pre">ju</span></code> + RJSF) and API endpoints.</p>
+</section>
+<section id="the-stack">
+<h3>The Stack<a class="headerlink" href="#the-stack" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><strong>Storage Layer:</strong> <code class="docutils literal notranslate"><span class="pre">dol</span></code> - Abstracts local files, S3, or DBs into dict-like interfaces</p></li>
+<li><p><strong>Logic Layer:</strong> <code class="docutils literal notranslate"><span class="pre">meshed</span></code> - DAGs and Slabs for workflow composition</p></li>
+<li><p><strong>Stream Layer:</strong> <code class="docutils literal notranslate"><span class="pre">creek</span></code> - Time-series data with <code class="docutils literal notranslate"><span class="pre">[bt:tt]</span></code> slicing</p></li>
+<li><p><strong>Adaptation Layer:</strong> <code class="docutils literal notranslate"><span class="pre">i2</span></code> - Function signature introspection, <code class="docutils literal notranslate"><span class="pre">ju</span></code> - JSON Schema generation</p></li>
+<li><p><strong>Service Layer:</strong> FastAPI - HTTP endpoints for all operations</p></li>
+<li><p><strong>Frontend:</strong> React + React Flow (visual graphs) + RJSF (forms) <em>(to be implemented)</em></p></li>
+</ul>
+</section>
+</section>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Clone the repository</span>
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/i2mint/app_meshed.git
+<span class="nb">cd</span><span class="w"> </span>app_meshed
+
+<span class="c1"># Install dependencies</span>
+pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
+
+<span class="c1"># Or install with development dependencies</span>
+pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span><span class="s2">".[dev]"</span>
+</pre></div>
+</div>
+</section>
+<section id="quick-start">
+<h2>Quick Start<a class="headerlink" href="#quick-start" title="Link to this heading">¶</a></h2>
+<section id="running-the-server">
+<h3>Running the Server<a class="headerlink" href="#running-the-server" title="Link to this heading">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Start the server (default: http://0.0.0.0:8000)</span>
+python<span class="w"> </span>-m<span class="w"> </span>app_meshed.cli
+
+<span class="c1"># Custom port and data directory</span>
+python<span class="w"> </span>-m<span class="w"> </span>app_meshed.cli<span class="w"> </span>--port<span class="w"> </span><span class="m">8080</span><span class="w"> </span>--data-path<span class="w"> </span>/path/to/data
+
+<span class="c1"># Enable auto-reload for development</span>
+python<span class="w"> </span>-m<span class="w"> </span>app_meshed.cli<span class="w"> </span>--reload<span class="w"> </span>--debug
+</pre></div>
+</div>
+</section>
+<section id="api-documentation">
+<h3>API Documentation<a class="headerlink" href="#api-documentation" title="Link to this heading">¶</a></h3>
+<p>Once the server is running, visit:</p>
+<ul class="simple">
+<li><p><strong>Interactive API Docs:</strong> http://localhost:8000/docs</p></li>
+<li><p><strong>Alternative Docs:</strong> http://localhost:8000/redoc</p></li>
+</ul>
+</section>
+<section id="basic-usage-examples">
+<h3>Basic Usage Examples<a class="headerlink" href="#basic-usage-examples" title="Link to this heading">¶</a></h3>
+<section id="list-available-functions">
+<h4>1. List Available Functions<a class="headerlink" href="#list-available-functions" title="Link to this heading">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>http://localhost:8000/functions
+</pre></div>
+</div>
+</section>
+<section id="get-function-schema-for-form-generation">
+<h4>2. Get Function Schema (for form generation)<a class="headerlink" href="#get-function-schema-for-form-generation" title="Link to this heading">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>http://localhost:8000/schema/function/add
+</pre></div>
+</div>
+</section>
+<section id="execute-a-simple-dag">
+<h4>3. Execute a Simple DAG<a class="headerlink" href="#execute-a-simple-dag" title="Link to this heading">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>http://localhost:8000/dag/execute<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Content-Type: application/json"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">'{</span>
+<span class="s1">    "dag_config": {</span>
+<span class="s1">      "name": "simple_add",</span>
+<span class="s1">      "nodes": [</span>
+<span class="s1">        {"id": "add_node", "function": "add"}</span>
+<span class="s1">      ],</span>
+<span class="s1">      "edges": []</span>
+<span class="s1">    },</span>
+<span class="s1">    "inputs": {</span>
+<span class="s1">      "add_node": {"a": 5, "b": 3}</span>
+<span class="s1">    }</span>
+<span class="s1">  }'</span>
+</pre></div>
+</div>
+</section>
+<section id="access-time-series-data">
+<h4>4. Access Time-Series Data<a class="headerlink" href="#access-time-series-data" title="Link to this heading">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># List available streams</span>
+curl<span class="w"> </span>http://localhost:8000/streams
+
+<span class="c1"># Slice a stream by time range [bt:tt]</span>
+curl<span class="w"> </span><span class="s2">"http://localhost:8000/streams/audio_sample/slice?bt=0.0&amp;tt=1.0"</span>
+
+<span class="c1"># Get synchronized multi-channel data</span>
+curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>http://localhost:8000/streams/multi-channel/slice<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Content-Type: application/json"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">'{</span>
+<span class="s1">    "channel_ids": ["sensor_accel_x", "sensor_accel_y"],</span>
+<span class="s1">    "bt": 0.0,</span>
+<span class="s1">    "tt": 5.0</span>
+<span class="s1">  }'</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="project-structure">
+<h2>Project Structure<a class="headerlink" href="#project-structure" title="Link to this heading">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>app_meshed/
+├── app_meshed/
+│   ├── api/
+│   │   ├── main.py          # FastAPI application
+│   │   └── startup.py       # Initialization tasks
+│   ├── stores/
+│   │   └── root_store.py    # Unified dol-based storage
+│   ├── services/
+│   │   ├── function_registry.py  # Function introspection (i2)
+│   │   ├── schema_service.py     # JSON Schema generation (ju)
+│   │   ├── dag_service.py        # DAG serialization/execution (meshed)
+│   │   └── stream_service.py     # Stream slicing (creek)
+│   └── utils/
+│       └── example_functions.py  # Sample functions for DAG composition
+├── data/                    # Default data directory (gitignored)
+│   ├── raw_data/           # Binary blobs (audio, sensor data)
+│   ├── functions/          # Saved functions (pickled)
+│   ├── meshes/             # DAG configurations (JSON)
+│   └── configs/            # Application configs (JSON)
+└── pyproject.toml
+</pre></div>
+</div>
+</section>
+<section id="api-endpoints">
+<h2>API Endpoints<a class="headerlink" href="#api-endpoints" title="Link to this heading">¶</a></h2>
+<section id="store-api-phase-i">
+<h3>Store API (Phase I)<a class="headerlink" href="#store-api-phase-i" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">GET</span> <span class="pre">/store/list</span></code> - List all available stores</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">GET</span> <span class="pre">/store/{store_name}/keys</span></code> - List keys in a store</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">GET</span> <span class="pre">/store/{store_name}/{key}</span></code> - Get an item from a store</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PUT</span> <span class="pre">/store/{store_name}/{key}</span></code> - Store an item</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DELETE</span> <span class="pre">/store/{store_name}/{key}</span></code> - Delete an item</p></li>
+</ul>
+</section>
+<section id="function-api-phase-i">
+<h3>Function API (Phase I)<a class="headerlink" href="#function-api-phase-i" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">GET</span> <span class="pre">/functions</span></code> - List all registered functions</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">GET</span> <span class="pre">/functions/{name}/metadata</span></code> - Get function metadata</p></li>
+</ul>
+</section>
+<section id="schema-api-phase-i-ii">
+<span id="schema-api-phase-i--ii"></span><h3>Schema API (Phase I &amp; II)<a class="headerlink" href="#schema-api-phase-i-ii" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">GET</span> <span class="pre">/schema/function/{name}</span></code> - Get JSON Schema for a function’s parameters</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">POST</span> <span class="pre">/schema/object</span></code> - Generate schema from an object</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">GET</span> <span class="pre">/schema/dag-config</span></code> - Get DAG configuration schema</p></li>
+</ul>
+</section>
+<section id="dag-api-phase-ii">
+<h3>DAG API (Phase II)<a class="headerlink" href="#dag-api-phase-ii" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">POST</span> <span class="pre">/dag/execute</span></code> - Execute a DAG from JSON config</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">POST</span> <span class="pre">/dag/validate</span></code> - Validate DAG config without executing</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">GET</span> <span class="pre">/dag/examples</span></code> - Get example DAG configurations</p></li>
+</ul>
+</section>
+<section id="stream-api-phase-iii">
+<h3>Stream API (Phase III)<a class="headerlink" href="#stream-api-phase-iii" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">GET</span> <span class="pre">/streams</span></code> - List all registered streams</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">GET</span> <span class="pre">/streams/{id}/metadata</span></code> - Get stream metadata</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">GET</span> <span class="pre">/streams/{id}/slice?bt=0&amp;tt=10</span></code> - Slice stream by time range</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">POST</span> <span class="pre">/streams/multi-channel/slice</span></code> - Get synchronized multi-channel data</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">POST</span> <span class="pre">/streams/multi-channel/info</span></code> - Get multi-channel metadata</p></li>
+</ul>
+</section>
+</section>
+<section id="development-phases">
+<h2>Development Phases<a class="headerlink" href="#development-phases" title="Link to this heading">¶</a></h2>
+<section id="phase-i-store-explorer">
+<span id="phase-i-store-explorer-"></span><h3>Phase I: Store Explorer ✅<a class="headerlink" href="#phase-i-store-explorer" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Unified dol-based storage interface</p></li>
+<li><p>Function registry with i2 signatures</p></li>
+<li><p>HTTP service with store CRUD operations</p></li>
+<li><p>Schema generation with ju</p></li>
+</ul>
+</section>
+<section id="phase-ii-mesh-maker-dag-builder">
+<span id="phase-ii-mesh-maker-dag-builder-"></span><h3>Phase II: Mesh Maker (DAG Builder) ✅<a class="headerlink" href="#phase-ii-mesh-maker-dag-builder" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>DAG JSON serialization/deserialization</p></li>
+<li><p>Schema endpoints for function parameters</p></li>
+<li><p>DAG execution and validation</p></li>
+<li><p>Example DAG configurations</p></li>
+</ul>
+</section>
+<section id="phase-iii-multi-channel-viewer">
+<span id="phase-iii-multi-channel-viewer-"></span><h3>Phase III: Multi-Channel Viewer ✅<a class="headerlink" href="#phase-iii-multi-channel-viewer" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Stream abstraction with creek</p></li>
+<li><p>[bt:tt] time-based slicing</p></li>
+<li><p>Multi-channel synchronization</p></li>
+<li><p>Sample stream generation</p></li>
+</ul>
+</section>
+<section id="next-steps-frontend">
+<h3>Next Steps (Frontend)<a class="headerlink" href="#next-steps-frontend" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>React-based Store Browser UI</p></li>
+<li><p>React Flow canvas for visual DAG composition</p></li>
+<li><p>RJSF forms for node configuration</p></li>
+<li><p>Plotly/Chart.js for stream visualization</p></li>
+</ul>
+</section>
+</section>
+<section id="key-concepts">
+<h2>Key Concepts<a class="headerlink" href="#key-concepts" title="Link to this heading">¶</a></h2>
+<section id="source-keyed-architecture">
+<h3>Source-Keyed Architecture<a class="headerlink" href="#source-keyed-architecture" title="Link to this heading">¶</a></h3>
+<p>All data sources are accessed through a uniform Mapping interface:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">app_meshed.stores.root_store</span><span class="w"> </span><span class="kn">import</span> <span class="n">create_default_root_store</span>
+
+<span class="n">root</span> <span class="o">=</span> <span class="n">create_default_root_store</span><span class="p">()</span>
+<span class="n">root</span><span class="o">.</span><span class="n">meshes</span><span class="p">[</span><span class="s2">"my_dag"</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"nodes"</span><span class="p">:</span> <span class="p">[</span><span class="o">...</span><span class="p">],</span> <span class="s2">"edges"</span><span class="p">:</span> <span class="p">[</span><span class="o">...</span><span class="p">]}</span>
+<span class="n">config</span> <span class="o">=</span> <span class="n">root</span><span class="o">.</span><span class="n">configs</span><span class="p">[</span><span class="s2">"app_settings"</span><span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="function-signatures-drive-everything">
+<h3>Function Signatures Drive Everything<a class="headerlink" href="#function-signatures-drive-everything" title="Link to this heading">¶</a></h3>
+<p>Functions registered in the system are introspected using <code class="docutils literal notranslate"><span class="pre">i2</span></code>, and their schemas are generated with <code class="docutils literal notranslate"><span class="pre">ju</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">process</span><span class="p">(</span><span class="n">audio</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">gain</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Apply gain to audio signal."""</span>
+    <span class="k">return</span> <span class="n">audio</span> <span class="o">*</span> <span class="n">gain</span>
+</pre></div>
+</div>
+<p>This automatically generates:</p>
+<ul class="simple">
+<li><p>API endpoint: <code class="docutils literal notranslate"><span class="pre">/schema/function/process</span></code></p></li>
+<li><p>JSON Schema for RJSF forms</p></li>
+<li><p>Parameter metadata for the frontend</p></li>
+</ul>
+</section>
+<section id="time-based-slicing-with-bt-tt">
+<span id="time-based-slicing-with-bttt"></span><h3>Time-Based Slicing with [bt:tt]<a class="headerlink" href="#time-based-slicing-with-bt-tt" title="Link to this heading">¶</a></h3>
+<p>Stream data is accessed using time ranges:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">stream</span> <span class="o">=</span> <span class="n">stream_registry</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"audio_sample"</span><span class="p">)</span>
+<span class="n">chunk</span> <span class="o">=</span> <span class="n">stream</span><span class="p">[</span><span class="mf">0.5</span><span class="p">:</span><span class="mf">1.5</span><span class="p">]</span>  <span class="c1"># Get data from 0.5s to 1.5s</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="contributing">
+<h2>Contributing<a class="headerlink" href="#contributing" title="Link to this heading">¶</a></h2>
+<p>See the main <a class="reference external" href="https://github.com/i2mint">i2mint organization</a> for contribution guidelines.</p>
+</section>
+<section id="license">
+<h2>License<a class="headerlink" href="#license" title="Link to this heading">¶</a></h2>
+<p>MIT</p>
+<p class="epythet-aggregates">This documentation as a single file: <a href="app_meshed.md">app_meshed.md</a> (Markdown, for agents).</p>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+</section>
+
+<p class="epythet-provenance" style="font-size:.8em;opacity:.65;margin-top:2.5em;text-align:right">built 2026-11-23 08:15 UTC from <a href="https://github.com/i2mint/app_meshed/commit/c0976a2d2cdb40ec9eeb039f2d67fc701cff09cd">c0976a2</a> (master) · app_meshed 0.0.2 · <a href="about-this-build.html">about this build</a></p>
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="api.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">API reference</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            Made with 
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">app_meshed</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a></li>
+<li><a class="reference internal" href="#architecture">Architecture</a><ul>
+<li><a class="reference internal" href="#core-philosophy">Core Philosophy</a></li>
+<li><a class="reference internal" href="#the-stack">The Stack</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#quick-start">Quick Start</a><ul>
+<li><a class="reference internal" href="#running-the-server">Running the Server</a></li>
+<li><a class="reference internal" href="#api-documentation">API Documentation</a></li>
+<li><a class="reference internal" href="#basic-usage-examples">Basic Usage Examples</a><ul>
+<li><a class="reference internal" href="#list-available-functions">1. List Available Functions</a></li>
+<li><a class="reference internal" href="#get-function-schema-for-form-generation">2. Get Function Schema (for form generation)</a></li>
+<li><a class="reference internal" href="#execute-a-simple-dag">3. Execute a Simple DAG</a></li>
+<li><a class="reference internal" href="#access-time-series-data">4. Access Time-Series Data</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#project-structure">Project Structure</a></li>
+<li><a class="reference internal" href="#api-endpoints">API Endpoints</a><ul>
+<li><a class="reference internal" href="#store-api-phase-i">Store API (Phase I)</a></li>
+<li><a class="reference internal" href="#function-api-phase-i">Function API (Phase I)</a></li>
+<li><a class="reference internal" href="#schema-api-phase-i-ii">Schema API (Phase I &amp; II)</a></li>
+<li><a class="reference internal" href="#dag-api-phase-ii">DAG API (Phase II)</a></li>
+<li><a class="reference internal" href="#stream-api-phase-iii">Stream API (Phase III)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#development-phases">Development Phases</a><ul>
+<li><a class="reference internal" href="#phase-i-store-explorer">Phase I: Store Explorer ✅</a></li>
+<li><a class="reference internal" href="#phase-ii-mesh-maker-dag-builder">Phase II: Mesh Maker (DAG Builder) ✅</a></li>
+<li><a class="reference internal" href="#phase-iii-multi-channel-viewer">Phase III: Multi-Channel Viewer ✅</a></li>
+<li><a class="reference internal" href="#next-steps-frontend">Next Steps (Frontend)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#key-concepts">Key Concepts</a><ul>
+<li><a class="reference internal" href="#source-keyed-architecture">Source-Keyed Architecture</a></li>
+<li><a class="reference internal" href="#function-signatures-drive-everything">Function Signatures Drive Everything</a></li>
+<li><a class="reference internal" href="#time-based-slicing-with-bt-tt">Time-Based Slicing with [bt:tt]</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#contributing">Contributing</a></li>
+<li><a class="reference internal" href="#license">License</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="_static/documentation_options.js?v=d58853b1"></script>
+    <script src="_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="_static/scripts/furo.js?v=46bd48cc"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=fd10adb8"></script>
+    </body>
+</html>

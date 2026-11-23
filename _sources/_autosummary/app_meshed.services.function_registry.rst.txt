@@ -1,0 +1,21 @@
+app\_meshed.services.function\_registry
+=======================================
+
+.. automodule:: app_meshed.services.function_registry
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      get_global_registry
+      register_function
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      FunctionMetadata
+      FunctionRegistry
+      ParameterInfo
+   

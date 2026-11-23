@@ -1,0 +1,18 @@
+﻿app\_meshed
+===========
+
+.. automodule:: app_meshed
+
+   
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   api
+   cli
+   models
+   services
+   stores
+   utils

@@ -1,0 +1,20 @@
+app\_meshed.services.schema\_service
+====================================
+
+.. automodule:: app_meshed.services.schema_service
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      func_to_schema
+      get_dag_config_schema
+      object_to_schema
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      SchemaGenerator
+   

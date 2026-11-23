@@ -1,0 +1,18 @@
+app\_meshed.stores.root\_store
+==============================
+
+.. automodule:: app_meshed.stores.root_store
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      create_default_root_store
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      RootStore
+   

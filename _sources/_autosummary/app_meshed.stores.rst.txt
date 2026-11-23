@@ -1,0 +1,13 @@
+app\_meshed.stores
+==================
+
+.. automodule:: app_meshed.stores
+
+   
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   root_store

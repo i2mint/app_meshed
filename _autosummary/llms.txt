@@ -1,0 +1,26 @@
+# app_meshed
+
+> Http services and frontend for meshed operations
+
+
+## Pages in this subsection
+
+- [app_meshed](app_meshed.html.md): app_meshed: HTTP services and frontend for meshed operations.
+- [app_meshed.api](app_meshed.api.html.md): | &#96;main&#96;       | Main FastAPI application for app_meshed.   |
+- [app_meshed.api.main](app_meshed.api.main.html.md): Main FastAPI application for app_meshed.
+- [app_meshed.api.startup](app_meshed.api.startup.html.md): Startup initialization for app_meshed.
+- [app_meshed.cli](app_meshed.cli.html.md): CLI for running the app_meshed server.
+- [app_meshed.models](app_meshed.models.html.md): Page content
+- [app_meshed.services](app_meshed.services.html.md): | &#96;dag_service&#96;             | DAG service for meshed operations.                          |
+- [app_meshed.services.dag_service](app_meshed.services.dag_service.html.md): DAG service for meshed operations.
+- [app_meshed.services.function_registry](app_meshed.services.function_registry.html.md): Function registry with i2 signature introspection.
+- [app_meshed.services.schema_service](app_meshed.services.schema_service.html.md): Schema generation service using ju (JSON Schema utilities).
+- [app_meshed.services.stream_service](app_meshed.services.stream_service.html.md): Stream service using creek for time-series data slicing.
+- [app_meshed.stores](app_meshed.stores.html.md): | &#96;root_store&#96;   | Unified store interface using dol for source-keyed data access.   |
+- [app_meshed.stores.root_store](app_meshed.stores.root_store.html.md): Unified store interface using dol for source-keyed data access.
+- [app_meshed.utils](app_meshed.utils.html.md): | &#96;example_functions&#96;   | Example functions for DAG composition.   |
+- [app_meshed.utils.example_functions](app_meshed.utils.example_functions.html.md): Example functions for DAG composition.
+
+## Optional
+
+- [Top-level llms.txt](../llms.txt): Complete documentation index.
