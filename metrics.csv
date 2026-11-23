@@ -1,0 +1,44 @@
+metric,value
+schema_version,1.0
+timestamp,2026-11-23T08:14:58.672721Z
+commit_sha,bb334e50d42a840357d55fd89d5c7ddd9ee9bd6b
+commit_message,"Fix master CI: dol import, i2 Sig, meshed DAG construction (#2)
+
+* Fix CI: dol.Files import, i2 Sig.parameters, meshed FuncNode-based DAG construction
+
+Master CI has been red since January: the PyPI dol has no dol.sources.Files, i2's Sig.params is no longer a mapping, and meshed's DAG no longer takes a dict of functions.
+
+* Declare numpy (imported by stream_service and api.startup)
+
+* Make the FunctionRegistry and RootStore doctests runnable (no /data, real output)"
+python_version,3.10
+metrics.umpyre_stats.num_functions,73
+metrics.umpyre_stats.num_classes,10
+metrics.umpyre_stats.total_lines,2221
+metrics.umpyre_stats.empty_lines,479
+metrics.umpyre_stats.comment_lines,81
+metrics.umpyre_stats.docs_lines,517
+metrics.umpyre_stats.function_lines,1278
+metrics.umpyre_stats.empty_lines_ratio,0.21566861773975687
+metrics.umpyre_stats.comment_lines_ratio,0.036470058532192706
+metrics.umpyre_stats.function_lines_ratio,0.5754164790634849
+metrics.umpyre_stats.mean_lines_per_function,17.506849315068493
+metrics.umpyre_stats.files_analyzed,15
+metrics.umpyre_stats.pypi_version,0.0.2
+metrics.workflow_status.last_run_status,success
+metrics.workflow_status.last_success_timestamp,2026-11-23T08:12:57Z
+metrics.workflow_status.recent_failure_count,7
+metrics.workflow_status.run_url,https://github.com/i2mint/app_meshed/actions/runs/45136540513
+metrics.workflow_status.total_runs_analyzed,9
+metrics.wily.cyclomatic_avg,0.0
+metrics.wily.maintainability_index,0.0
+metrics.wily.total_loc,0
+metrics.wily.files_analyzed,0
+metrics.wily.error,"wily build failed: [31mFailed to setup archiver: 'Dirty repository, make sure you commit/stash files first'[0m
+"
+metrics.coverage.line_coverage,0.0
+metrics.coverage.branch_coverage,0.0
+metrics.coverage.statements_covered,0
+metrics.coverage.statements_total,0
+metrics.coverage.error,No coverage file found
+collection_duration_seconds,1.0996439456939697
